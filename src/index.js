@@ -1,0 +1,1 @@
+import jsx from './app.jsx';
