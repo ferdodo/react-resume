@@ -1,6 +1,7 @@
 import React         from 'react';
 import ReactDOM      from 'react-dom';
 import Timeline      from './components/timeline/index.jsx';
+import Qualification from './components/qualification/index.jsx';
 import resumeContent from './resume.json';
 
 class App extends React.Component {
@@ -10,6 +11,7 @@ class App extends React.Component {
 		return (
 
 			<div className="App">
+				<Qualification content={resumeContent.qualifications}/>
 				<Timeline content={resumeContent.timeline}/>
 			</div>
 		);
