@@ -1,10 +1,13 @@
-import React from 'react';
+import React    from 'react';
 import ReactDOM from 'react-dom';
-import css from './style.css'
+import Circle   from '../circle/index.jsx';
+import css      from './style.css'
 
 export default class Timeline extends React.Component{
 
+
 	renderElement(i) {
+		let key = btoa(JSON.stringify(i));
 		let date = new Date(i.timestamp);
 
 		let month = ['January','February','March','April',
@@ -13,13 +16,30 @@ export default class Timeline extends React.Component{
 
 		let year = date.getFullYear(); 
 
+		const timeStyle = {
+			"width"      : "4cm",
+			"display"    : "inline-block",
+			"text-align" : "right"
+        };
+
+        const circleStyle = {
+        	"margin"  : "1cm",
+        	"display" : "inline-block"
+        };
+
 		return (
-			<div>{month} {year} {i.location} {i.achievement} </div>
+			
+			<div key={key}>
+				<span style={timeStyle}> {month} {year} </span> 
+				<div style={circleStyle}><Circle size="3mm" color="red"/></div> 
+				<span> {i.location} </span>
+				<br/> 
+				<span> {i.achievement} </span>
+			</div>
 		);
 	}
 
 	render(){
-		
 		
 		return (
 			<div className="Timeline">
