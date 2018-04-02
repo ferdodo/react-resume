@@ -1,6 +1,6 @@
 
 module.exports = {
-	"entry"  : './src/index.js',
+	"entry"  : './src/app.jsx',
 	"output" : {
     	"path"     : __dirname + "/www",
     	"filename" : "bundle.js"
