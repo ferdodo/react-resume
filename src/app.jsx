@@ -1,6 +1,5 @@
 import React         from 'react';
 import ReactDOM      from 'react-dom';
-import Circle        from './components/circle/index.jsx';
 import Timeline      from './components/timeline/index.jsx';
 import resumeContent from './resume.json';
 
