@@ -7,9 +7,9 @@ export default class Circle extends React.Component{
 	render(){
 
 		const divStyle = {
-            "background-color" : this.props.color,
-			"width"            : this.props.size,
-			"height"           : this.props.size 
+            "backgroundColor" : this.props.color,
+			"width"           : this.props.size,
+			"height"          : this.props.size 
         };
 		
 		return (
