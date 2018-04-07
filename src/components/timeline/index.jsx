@@ -1,24 +1,20 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
 import Circle   from '../circle/index.jsx';
+import moment   from 'moment';
 
 export default class Timeline extends React.Component{
 
 
 	renderElement(i) {
 		let key = btoa(JSON.stringify(i));
-		let date = new Date(i.timestamp);
-
-		let month = ['January','February','March','April',
-			'May','June','July','August','September','October',
-			'November','December'][date.getMonth()];
-
-		let year = date.getFullYear(); 
+		console.log(this.props)
+		let time = moment(i.timestamp).lang(this.props.lang).format('YYYY MMMM');
 
 		const timeStyle = {
 			"width"      : "4cm",
 			"display"    : "inline-block",
-			"text-align" : "right"
+			"textAlign" : "right"
         };
 
         const circleStyle = {
@@ -51,7 +47,7 @@ export default class Timeline extends React.Component{
 		
 		return (
 			<div className="Timeline">
-				{ this.props.content.map(this.renderElement) }
+				{ this.props.content.map(this.renderElement.bind(this)) }
 			</div>
 		);
 	}

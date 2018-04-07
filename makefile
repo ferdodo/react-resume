@@ -18,6 +18,7 @@ node_modules:
 	npm install -s babel-preset-react
 	npm install -s react
 	npm install -s react-dom
+	npm install -s moment
 
 
 clean:

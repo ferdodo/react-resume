@@ -12,7 +12,7 @@ class App extends React.Component {
 
 			<div className="App">
 				<Qualification content={resumeContent.qualifications}/>
-				<Timeline content={resumeContent.timeline}/>
+				<Timeline lang={resumeContent.lang} content={resumeContent.timeline}/>
 			</div>
 		);
 	}
