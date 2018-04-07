@@ -23,21 +23,28 @@ export default class Timeline extends React.Component{
         };
 
         const achievementStyle = {
-        	"margin-left"    : "4.36cm",
-        	"margin-bottom"  : "-5px",
-        	"margin-top"     : "-5px",
-        	"border-left"    : "1mm solid #5c98ff",
-        	"display"        : "inline-block",
-        	"padding"        : "6mm"
+			"marginLeft"     : "4.36cm",
+			"marginBottom"   : "-5px",
+			"marginTop"      : "-5px",
+			"borderLeft"     : "1mm solid #5c98ff",
+			"display"        : "inline-block",
+			"padding"        : "6mm"
+        };
+
+        const locationStyle = {
+        	"whiteSpace" : "nowrap"
         };
 
 		return (
 			
 			<div key={key}>
-				<span style={timeStyle}> {month} {year} </span> 
-				<div style={circleStyle}><Circle size="3mm" color="#5c98ff"/></div> 
-				<span> {i.location} </span>
-				<br/>
+				
+				<div style={locationStyle}>					
+					<span style={timeStyle}> {time} </span> 
+					<div  style={circleStyle}><Circle size="3mm" color="#5c98ff"/></div> 
+					<span style={locationStyle}> {i.location} </span>
+				</div>
+				
 				<div style={achievementStyle}> {i.achievement} </div>
 			</div>
 		);
