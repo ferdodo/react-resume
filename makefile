@@ -19,6 +19,9 @@ node_modules:
 	npm install -s react
 	npm install -s react-dom
 	npm install -s moment
+	npm install -s url-loader
+	npm install -s file-loader
+	npm install -s spectre.css
 
 
 clean:

@@ -1,0 +1,22 @@
+@font-face{
+    font-family  :  "reactResumeFont";
+    src          :  url('./fonts/LinLibertine_R.ttf') format('truetype');
+	font-weight  : normal;
+    font-style   : normal;
+    font-variant : normal;
+}
+
+@font-face{
+    font-family : "reactResumeFont";
+    src         : url('./fonts/LinLibertine_RB.ttf') format('truetype');
+    font-weight : bold;
+    font-style  : normal;
+}
+
+p, span, div{
+    font-family : "reactResumeFont";
+}
+
+body{
+	color: inherit;
+}
