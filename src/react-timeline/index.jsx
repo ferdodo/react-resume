@@ -1,6 +1,6 @@
 import React       from 'react';
 import ReactDOM    from 'react-dom';
-import Circle      from '../circle/index.jsx';
+import Circle      from '../react-circle/index.jsx';
 import moment      from 'moment';
 
 export default class Timeline extends React.Component{

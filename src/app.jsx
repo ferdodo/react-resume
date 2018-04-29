@@ -1,11 +1,10 @@
+import spectre       from './css-spectre/index.jsx'
+import customFont    from './css-customFont/index.jsx';
+import Timeline      from './react-timeline/index.jsx';
+import Qualification from './react-qualification/index.jsx';
+import resume        from './thomas-riffard.json';
 import React         from 'react';
 import ReactDOM      from 'react-dom';
-import Timeline      from './components/timeline/index.jsx';
-import Qualification from './components/qualification/index.jsx';
-import resumeContent from './thomas-riffard.json';
-import spectre       from 'spectre.css';
-import webFont       from './fonts/LinLibertine_R.ttf';
-import style         from './style.css';
 
 class App extends React.Component {
 
@@ -14,8 +13,8 @@ class App extends React.Component {
 		return (
 
 			<div className="App">
-				<Qualification content={resumeContent.qualifications}/>
-				<Timeline lang={resumeContent.lang} content={resumeContent.timeline}/>
+				<Qualification content={resume.qualifications}/>
+				<Timeline lang={resume.lang} content={resume.timeline}/>
 			</div>
 		);
 	}
