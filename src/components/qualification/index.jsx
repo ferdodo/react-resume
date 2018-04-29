@@ -4,11 +4,31 @@ import ReactDOM from 'react-dom';
 export default class Qualification extends React.Component{
 
 
-	renderExperience(i){
-		let key = btoa(JSON.stringify(i));
+	renderExperience(o, i){
+		let key = btoa(JSON.stringify(o));
+
+		const cardHeaderStyle = {
+	    	"fontWeight" : "bold" 
+	    };
+
+	    const briefStyle = {
+	    	"marginRight" : "3mm" 
+	    };
 
 		return (
-			<span key={key}> {i} </span>
+			<span 
+				className={"popover popover-"+ (i>3?"bottom":"right")} 
+				key={key} 
+				style={briefStyle}> 
+				{o.brief} 
+
+				<div class="popover-container">
+			    <div class="card">
+			      <div class="card-header" style={cardHeaderStyle}> {o.brief} </div>
+			      <div class="card-body"> {o.detail} </div>
+			    </div>
+			  </div>
+			</span>
 		);
 	}
 
@@ -19,10 +39,14 @@ export default class Qualification extends React.Component{
 			"margin" : "13mm"
 	    };
 
+	    const jobStyle = {
+	    	"fontWeight" : "bold" 
+	    };
+
 		return (
 			
 			<div key={key} style={qualificationStyle}>
-				<div><span><b> {i.job} </b></span></div> 
+				<div><span style={jobStyle}> {i.job} </span></div> 
 				{ i.experiences.map(this.renderExperience) } 
 			</div>
 		);
