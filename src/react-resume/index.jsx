@@ -1,6 +1,6 @@
 import Timeline      from './../react-timeline/index.jsx';
 import Qualification from './../react-qualification/index.jsx';
-import resume        from './thomas-riffard.json';
+import resume        from './resume.json';
 import React         from 'react';
 import ReactDOM      from 'react-dom';
 
