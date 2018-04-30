@@ -1,5 +1,13 @@
 {
-	"name" : "John Doe",
+	"personalInfo" : {
+		"name" : "John Doe",
+		"infos" : [
+			"Pariatur irure",
+			"Sint cupidatat",
+			"Lorem ipsum ad",
+			"Magna laborum duis"
+		]
+	}, 
 	"lang" : "en",
 	"contact"  : "",
 	"qualifications" : [{

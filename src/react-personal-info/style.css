@@ -1,0 +1,24 @@
+
+.Personal{
+	margin: 1.35cm;
+	text-align: center;
+}
+
+.PersonalInfo{
+	margin-bottom: 0;
+	line-height: 0.8em;
+}
+
+.PersonalInfoName{
+	font-weight: 800;
+	margin-bottom: 5px;
+}
+
+.PersonalPicture{
+	height: 2.2cm;
+	width: 2.2cm;
+	margin-left:auto;
+	margin-right:auto;
+	background-size: cover;
+	border-radius: 50%;
+}
