@@ -36,7 +36,7 @@ export default class Qualification extends React.Component{
 		let key = btoa(JSON.stringify(i));
 
 		const qualificationStyle = {
-			"margin" : "13mm"
+			"margin" : "13mm 13mm 13mm 5mm"
 	    };
 
 	    const jobStyle = {

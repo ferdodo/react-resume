@@ -9,7 +9,12 @@
 		]
 	}, 
 	"lang" : "en",
-	"contact"  : "",
+	"contact"  : {
+		"mail"    : "johndoe@jEldp8c6.com",
+		"phone"   : "987 9328 398",
+		"website" : "jEldp8c6.com",
+		"github"  : "github.com/jEldp8c6"
+	},
 	"qualifications" : [{
 		"job" : "In sollicitudin",
 		"experiences" : [
