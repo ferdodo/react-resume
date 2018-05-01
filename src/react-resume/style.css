@@ -1,0 +1,19 @@
+.App{
+	max-width: 21cm;
+	border: 1px solid lightgray;
+    box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.3);
+    padding: 2cm;
+    margin: 5mm auto 5mm auto;
+}
+
+
+@media print {
+	
+	.App {
+		max-width    : initial;
+		border       : initial;
+		box-shadow   : initial;
+		padding      : initial; 
+		margin       : initial; 
+	}
+}

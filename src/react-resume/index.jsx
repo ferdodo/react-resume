@@ -5,6 +5,7 @@ import Contact       from './../react-contact/index.jsx';
 import resume        from './resume.json';
 import React         from 'react';
 import ReactDOM      from 'react-dom';
+import style         from './style.css';
 
 class App extends React.Component {
 

@@ -1,5 +1,6 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
+import style    from './style.css';
 
 export default class Qualification extends React.Component{
 
@@ -36,7 +37,7 @@ export default class Qualification extends React.Component{
 		let key = btoa(JSON.stringify(i));
 
 		const qualificationStyle = {
-			"margin" : "13mm 13mm 13mm 5mm"
+			"margin" : "7mm 13mm 7mm 5mm"
 	    };
 
 	    const jobStyle = {
