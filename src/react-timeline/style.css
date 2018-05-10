@@ -7,12 +7,12 @@
 }
 
 .TimelineTime{
-	display : inline-block;
+	display    : inline-block;
 	text-align : right;
 }
 
 .TimelineCircle{
-	display       : inline-block;
+	display : inline-block;
 }
 
 .TimelineAchievement{	

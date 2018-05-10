@@ -25,11 +25,7 @@ export default class Timeline extends React.Component{
 
         const achievementStyle = {
 			"marginLeft"     : (marginSize+circleSpacingSize+(circleSize/2)-(lineSize/2))+"px",
-			"marginBottom"   : "-12px",
-			"marginTop"      : "-12px",
-			"borderLeft"     : lineSize+"px solid #5c98ff",
-			"display"        : "inline-block",
-			"padding"        : "6mm"
+			"borderLeft"     : lineSize+"px solid #5c98ff"
         };
 
         const locationStyle = {
@@ -42,11 +38,11 @@ export default class Timeline extends React.Component{
 				
 				<div className="TimelineLocation">					
 					<span style={timeStyle} className="TimelineTime"> {time} </span> 
-					<div  style={circleStyle}><Circle size={circleSize+"px"} color="#5c98ff"/></div> 
+					<div  style={circleStyle} className="TimelineCircle"><Circle size={circleSize+"px"} color="#5c98ff"/></div> 
 					<span style={locationStyle}> {i.location} </span>
 				</div>
 				
-				<div style={achievementStyle}> {i.achievement} </div>
+				<div style={achievementStyle} className="TimelineAchievement"> {i.achievement} </div>
 			</div>
 		);
 	}
