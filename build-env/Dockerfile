@@ -2,24 +2,21 @@
 
 # install environement
 from ubuntu
-RUN apt-get update && apt-get install -y \
-	npm \
-	make
-RUN npm install -g \
-	webpack \
-	webpack-cli
+RUN apt-get update && apt-get install -y npm
+RUN npm install -g webpack webpack-cli
 
 
 # install react-resume
-COPY makefile ./
-RUN make node_modules
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
 
 
 # build react-resume
 COPY src src
 COPY www www
 COPY webpack.config.js ./
-RUN make
+RUN webpack --mode development --display=errors-only --display-error-details
 
 
 # export build
