@@ -1,8 +1,7 @@
 
 
 # install environement
-from ubuntu
-RUN apt-get update && apt-get install -y npm
+from node
 RUN npm install -g webpack webpack-cli
 
 
