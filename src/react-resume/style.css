@@ -1,4 +1,9 @@
+body{
+	background-color: #d4cfd5;
+}
+
 .App{
+	background-color: white;
 	max-width: 21cm;
 	border: 1px solid lightgray;
     box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.3);
@@ -8,6 +13,10 @@
 
 
 @media print {
+
+	body{
+		background-color: initial;
+	}
 	
 	.App {
 		max-width    : initial;
