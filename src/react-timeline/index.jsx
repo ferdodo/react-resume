@@ -16,11 +16,7 @@ export default class Timeline extends React.Component{
 		var circleSpacingSize = 1*8;
 		var lineSize          = 2;
 
-		const timeStyle = {
-			"width"      : marginSize+"px",
-			"display"    : "inline-block",
-			"textAlign" : "right"
-        };
+		const timeStyle = {"width" : marginSize+"px"};
 
         const circleStyle = {
         	"margin"      : "0px "+(circleSpacingSize/2)+"px 0px "+circleSpacingSize+"px",
@@ -44,8 +40,8 @@ export default class Timeline extends React.Component{
 			
 			<div key={key}>
 				
-				<div style={locationStyle}>					
-					<span style={timeStyle}> {time} </span> 
+				<div className="TimelineLocation">					
+					<span style={timeStyle} className="TimelineTime"> {time} </span> 
 					<div  style={circleStyle}><Circle size={circleSize+"px"} color="#5c98ff"/></div> 
 					<span style={locationStyle}> {i.location} </span>
 				</div>

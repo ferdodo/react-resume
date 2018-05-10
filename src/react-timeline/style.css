@@ -1,3 +1,23 @@
 .Timeline{
 	margin: 15mm 0mm 0mm 0mm;
 }
+
+.TimelineLocation{
+	white-space: nowrap;
+}
+
+.TimelineTime{
+	display : inline-block;
+	text-align : right;
+}
+
+.TimelineCircle{
+	display       : inline-block;
+}
+
+.TimelineAchievement{	
+	margin-bottom : -12px;
+	margin-top    : -12px;
+	display       : inline-block;
+	padding       : 6mm;
+}
