@@ -11,38 +11,52 @@ export default class Timeline extends React.Component{
 		let key = btoa(JSON.stringify(i));
 		let time = moment(i.timestamp).locale(this.props.lang).format('YYYY MMMM');
 
-		var marginSize        = 18*8;
-		var circleSize        = 1*8;
-		var circleSpacingSize = 1*8;
-		var lineSize          = 2;
+		var a = 18*8; // margin size
+		var b = 1*8;  // circle size
+		var c = 1*8;  // circle spacing
+		var d = 2;    // line size
 
-		const timeStyle = {"width" : marginSize+"px"};
+		const timeStyle = {"width" : a+"px"};
 
         const circleStyle = {
-        	"margin"      : "0px "+(circleSpacingSize/2)+"px 0px "+circleSpacingSize+"px",
+        	"margin"      : "0px "+(c/2)+"px 0px "+c+"px",
         	"display"     : "inline-block"
         };
 
         const achievementStyle = {
-			"marginLeft"     : (marginSize+circleSpacingSize+(circleSize/2)-(lineSize/2))+"px",
-			"borderLeft"     : lineSize+"px solid #5c98ff"
-        };
-
-        const locationStyle = {
-        	"whiteSpace" : "nowrap"
+			"marginLeft"     : (a+c+(b/2)-(d/2))+"px",
+			"borderLeft"     : d+"px solid #5c98ff"
         };
 
 		return (
 			
 			<div key={key}>
 				
-				<div className="TimelineLocation">					
-					<span style={timeStyle} className="TimelineTime"> {time} </span> 
-					<div  style={circleStyle} className="TimelineCircle"><Circle size={circleSize+"px"} color="#5c98ff"/></div> 
-					<span style={locationStyle}> {i.location} </span>
+				<div className="TimelineHeader">					
+					
+					<span 
+						style={timeStyle} 
+						className="TimelineTime"> 
+						{time} 
+					</span> 
+					
+					<div 
+						style={circleStyle} 
+						className="TimelineCircle">
+						<Circle size={b+"px"} color="#5c98ff"/>
+					</div> 
+					
+					<span 
+						className="TimelineLocation"> 
+						{i.location} 
+					</span>
 				</div>
 				
-				<div style={achievementStyle} className="TimelineAchievement"> {i.achievement} </div>
+				<div 
+					style={achievementStyle} 
+					className="TimelineAchievement"> 
+					{i.achievement}
+				</div>
 			</div>
 		);
 	}

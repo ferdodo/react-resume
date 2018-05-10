@@ -3,7 +3,11 @@
 }
 
 .TimelineLocation{
-	white-space: nowrap;
+	white-space : nowrap;
+}
+
+.TimelineHeader{
+	white-space : nowrap;
 }
 
 .TimelineTime{
