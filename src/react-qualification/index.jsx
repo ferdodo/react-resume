@@ -23,10 +23,10 @@ export default class Qualification extends React.Component{
 				style={briefStyle}> 
 				{o.brief} 
 
-				<div class="popover-container">
-			    <div class="card">
-			      <div class="card-header" style={cardHeaderStyle}> {o.brief} </div>
-			      <div class="card-body"> {o.detail} </div>
+				<div className="popover-container">
+			    <div className="card">
+			      <div className="card-header" style={cardHeaderStyle}> {o.brief} </div>
+			      <div className="card-body"> {o.detail} </div>
 			    </div>
 			  </div>
 			</span>

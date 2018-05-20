@@ -14,8 +14,8 @@ class App extends React.Component {
 		return (
 
 			<div className="App">
-				<div class="container">
-  					<div class="columns">
+				<div className="container">
+  					<div className="columns">
 						<div className="col-6">
 							<PersonalInfo content={resume.personalInfo}/>
 						</div>
