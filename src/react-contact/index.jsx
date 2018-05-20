@@ -4,38 +4,36 @@ import css      from './style.css';
 
 export default class Contact extends React.Component{
 
+	renderContactItem(i){
+		let key = btoa(JSON.stringify(i));
+		const iconClasses = "icon " + i.iconClass;
+
+		return (
+
+			<tr key={key}>
+			
+				<td>				
+					<div className="icon-container">
+						<span className={iconClasses}> {String.fromCharCode(i.icon)} </span>
+					</div>
+				</td>
+				
+				<td>{i.content}</td>
+			</tr> 
+		);
+	}
+
 	render(){
+
+		let items = [
+			{"content" : this.props.content.phone,   "icon" : 0xF10B, "iconClass" : "icon-phone"},
+			{"content" : this.props.content.mail,    "icon" : 0xE800},
+			{"content" : this.props.content.website, "icon" : 0xF018},
+			{"content" : this.props.content.github,  "icon" : 0xF09B}
+		].filter(o=>!!o.content);
 		
 		return (
-			<table className="contact">
-				{ this.props.content.phone && 
-					<tr>
-						<td> <div class="icon-container"> <span class="icon icon-phone">&#xF10B;</span> </div> </td>
-						<td> {this.props.content.phone} </td> 
-					</tr> 
-				}
-
-				{ this.props.content.mail && 
-					<tr>
-						<td> <div class="icon-container"> <span class="icon">&#xE800;</span> </div> </td>
-						<td>  {this.props.content.mail} </td> 
-					</tr>  
-				}
-
-				{ this.props.content.website && 
-					<tr>
-						<td> <div class="icon-container"> <span class="icon">&#xF018;</span> </div> </td>
-						<td> {this.props.content.website} </td> 
-					</tr>  
-				}
-
-				{ this.props.content.github && 
-					<tr>
-						<td> <div class="icon-container"> <span class="icon">&#xF09B;</span> </div> </td>
-						<td> {this.props.content.github} </td> 
-					</tr>  
-				}
-			</table>
+			<table className="contact"><tbody>{items.map(this.renderContactItem)}</tbody></table>
 		);
 	}
 }
