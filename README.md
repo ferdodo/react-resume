@@ -1,13 +1,20 @@
 # react-resume
 A small web resume project based on React.
 
-### Edit the resume
-Edit the `src/react-resume/resume.json` with your own informations.
+## Dependancies
 
-Change the `src/profile.jpg` profile picture.
+* docker
+* docker-compose
+* make
+
+### Edit the resume
+
+Edit the `web/build/src/react-resume/resume.json` with your own informations.
+
+Change the `web/build/src/profile.jpg` profile picture.
 
 ### Start with Docker
 	
-	$ ./docker-run.sh && xargs firefox < docker-ip
+Use the command `make` to build and run the project with docker.
 
-You can replace Firefox with your own browser.
+Open a browser to `http://localhost:4321`.
