@@ -7,13 +7,13 @@ A small web resume project based on React.
 * docker-compose
 * make
 
-### Edit the resume
+## Edit the resume
 
 Edit the `web/build/src/react-resume/resume.json` with your own informations.
 
 Change the `web/build/src/profile.jpg` profile picture.
 
-### Start with Docker
+## Start with Docker
 	
 Use the command `make` to build and run the project with docker.
 
