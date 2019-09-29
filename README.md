@@ -1,4 +1,7 @@
 # react-resume
+
+![Example](https://github.com/ferdodo/react-resume/raw/master/example.png "Example")
+
 A small web resume project based on React.
 
 ## Dependancies
@@ -17,4 +20,4 @@ Change the `web/build/src/profile.jpg` profile picture.
 	
 Use the command `make` to build and run the project with docker.
 
-Open a browser to `http://localhost:4321`.
+Open a browser to http://localhost:4321.
