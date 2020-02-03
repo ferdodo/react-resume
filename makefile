@@ -1,5 +1,10 @@
 
-default:
+
+run: up logs
+
+
+logs:
+	docker-compose logs -f
 
 
 up: down build
@@ -11,6 +16,4 @@ down:
 
 
 build:
-	make -C web/build
 	docker-compose build
-	make -C web/build clean
