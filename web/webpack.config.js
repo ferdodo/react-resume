@@ -1,5 +1,6 @@
 
 module.exports = {
+    "mode" : "production",
 	"entry"  : './src/index.jsx',
 	"output" : {
     	"path"     : __dirname + "/www",
@@ -14,7 +15,7 @@ module.exports = {
 			"exclude" : /(node_modules|bower_components)/,
       		"use"     : {
         		"loader"  : 'babel-loader',
-        		"options" : {"presets" : ['env', 'react']}
+                "options": {"presets": ['@babel/preset-env', '@babel/preset-react']}
       		}
     	},{
     		"test"   : /\.(png|woff|woff2|eot|ttf|svg)$/,

@@ -1,22 +1,25 @@
 
 # install environement
 FROM node
-RUN npm install -g webpack webpack-cli
+WORKDIR /react-resume
 
 
-# install react-resume
-COPY package.json ./
-COPY package-lock.json ./
+# node_modules
+COPY package.json .
+COPY npm-shrinkwrap.json .
 RUN npm install
+RUN npm outdated
+RUN npm audit
 
 
-# build react-resume
+# bundle
 COPY src src
 COPY www www
-COPY webpack.config.js ./
-RUN webpack --mode development --display=errors-only --display-error-details
+COPY webpack.config.js .
+RUN ls -l
+RUN npx webpack
 
 
 # prod env
 FROM httpd
-COPY --from=0 www /usr/local/apache2/htdocs
+COPY --from=0 /react-resume/www /usr/local/apache2/htdocs
