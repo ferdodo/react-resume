@@ -14,7 +14,6 @@ RUN npm audit
 
 # bundle
 COPY src src
-COPY www www
 COPY webpack.config.js .
 RUN ls -l
 RUN npx webpack

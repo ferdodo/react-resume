@@ -1,3 +1,4 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	"mode" : "production",
@@ -6,6 +7,7 @@ module.exports = {
 		"path"     : __dirname + "/www",
 		"filename" : "bundle.js"
 	},
+	"plugins": [new HtmlWebpackPlugin()],
 	"module" : {
 		"rules" : [{
 				"test" : /\.css$/,
