@@ -8,7 +8,6 @@ A small web resume project based on React.
 
 * docker
 * docker-compose
-* make
 
 ## Edit the resume
 
@@ -18,6 +17,6 @@ Change the `web/build/src/profile.jpg` profile picture.
 
 ## Start with Docker
 	
-Use the command `make` to build and run the project with docker.
+Use the command `docker-compose up` to build and run the project with docker.
 
 Open a browser to http://localhost:4321.
