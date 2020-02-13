@@ -11,9 +11,9 @@ A small web resume project based on React.
 
 ## Edit the resume
 
-Edit the `web/src/react-resume/resume.json` with your own informations.
+Edit the `lib/react-resume/resume.json` with your own informations.
 
-Change the `web/src/profile.jpg` profile picture.
+Change the `lib/profile.jpg` profile picture.
 
 ## Start with Docker
 	
