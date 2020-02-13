@@ -8,8 +8,8 @@ WORKDIR /react-resume
 COPY package.json .
 COPY npm-shrinkwrap.json .
 RUN npm install
-#RUN npm outdated
-#RUN npm audit
+RUN npm outdated
+RUN npm audit
 
 
 # bundle
