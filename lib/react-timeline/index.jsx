@@ -31,7 +31,7 @@ export default class Timeline extends React.Component{
 
 		return (
 			
-			<div key={key}>
+			<div key={key} className="TimelineElement">
 				
 				<div className="TimelineHeader">					
 					

@@ -2,6 +2,10 @@
 	margin: 15mm 0mm 0mm 0mm;
 }
 
+.TimelineElement{
+	page-break-inside: avoid;
+}
+
 .TimelineLocation{
 	white-space : nowrap;
 }
