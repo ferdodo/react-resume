@@ -25,7 +25,8 @@ export default class Timeline extends React.Component{
 
         const achievementStyle = {
 			"marginLeft"     : (a+c+(b/2)-(d/2))+"px",
-			"borderLeft"     : d+"px solid #5c98ff"
+			"borderLeft"     : d+"px solid #5c98ff",
+			"whiteSpace"     : "pre-line"
         };
 
 		return (
