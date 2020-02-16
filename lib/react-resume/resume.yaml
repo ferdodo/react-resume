@@ -39,6 +39,7 @@ qualifications:
 
 timeline:
 - timestamp: 1502594930818
+  duration:
   location: Consequat incididunt ad ad
   position: Ut excepteur
   achievements: 
@@ -47,12 +48,14 @@ timeline:
   - Donec pharetra tellus ante, in viverra tellus lobortis.
 
 - timestamp: 1511584930818
+  duration:
   location: Integer nisl magna, ultrices sit amet
   position: Lorem ipsum do id
   achievements: 
   - Nulla facilisi. Fusce ac dolor in purus tristique euismod.
 
 - timestamp: 1520584930818
+  duration:
   position: Ut excepteur
   location: Ex voluptate
   achievements: 
