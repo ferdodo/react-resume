@@ -25,7 +25,7 @@ export default class Timeline extends React.Component{
 
 		return (
 			<div 
-				className="TimelineAchievement"
+				className="achievement"
 				key={key}
 				style={{marginLeft, borderLeft}}> 
 				{achievement}
@@ -41,7 +41,7 @@ export default class Timeline extends React.Component{
 		return(
 			<div 
 				style={circleStyle} 
-				className="TimelineCircle">
+				className="circle">
 				<Circle color="#5c98ff" size={this.B+"px"}/>
 			</div> 
 		)
@@ -56,7 +56,7 @@ export default class Timeline extends React.Component{
 		return(
 			<span 
 				style={timeStyle} 
-				className="TimelineTime"> 
+				className="time"> 
 				{time} <br/> {element.duration}
 			</span>
 		)
@@ -65,7 +65,7 @@ export default class Timeline extends React.Component{
 
 	renderHeader(element){
 		return(
-			<span className="TimelineLocation"> <b> {element.position} </b> - {element.location} </span>
+			<span className="location"> <b> {element.position} </b> - {element.location} </span>
 		)
 	}
 
@@ -75,8 +75,8 @@ export default class Timeline extends React.Component{
 		const key = btoa(JSON.stringify(element)+index);
 
 		return (
-			<div className="TimelineElement" key={key}>
-				<div className="TimelineHeader">
+			<div className="element" key={key}>
+				<div className="header">
 					{ this.renderTime(element) }
 					{ this.renderCircle() }
 					{ this.renderHeader(element) }

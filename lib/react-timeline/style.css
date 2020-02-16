@@ -2,32 +2,34 @@
 	margin: 15mm 0mm 0mm 0mm;
 }
 
-.TimelineElement{
+.Timeline > .element{
 	page-break-inside: avoid;
 }
 
-.TimelineLocation, .TimelineLocation > b{
-	vertical-align: top;
-	white-space : nowrap;
-}
-
-.TimelineHeader{
+.Timeline > .element > .header{
 	max-height: 25px;
 	white-space : nowrap;
 }
 
-.TimelineTime{
-	display    : inline-block;
-	text-align : right;
-	white-space   : pre-line;
+.Timeline > .element > .header > .location, 
+.Timeline > .element > .header > .location > b{
+	vertical-align: top;
+	white-space : nowrap;
 }
 
-.TimelineCircle{
+
+.Timeline > .element > .header > .time{
+	display     : inline-block;
+	text-align  : right;
+	white-space : pre-line;
+}
+
+.Timeline > .element > .header > .circle{
 	vertical-align: top;
 	display : inline-block;
 }
 
-.TimelineAchievement{	
+.Timeline > .element > .achievement{	
 	margin-bottom : -20px;
 	margin-top    : -12px;
 	display       : inline-block;
