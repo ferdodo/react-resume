@@ -6,68 +6,97 @@ import style       from './style.css'
 
 export default class Timeline extends React.Component{
 
+	constructor(props){
+		super(props);
+		this.A = 18*8; // margin size
+		this.B = 1*8;  // circle size
+		this.C = 1*8;  // circle spacing
+		this.D = 2;    // line size
+	}
 
-	renderElement(i) {
-		let key = btoa(JSON.stringify(i));
-		let time = moment(i.timestamp).locale(this.props.lang).format('YYYY MMMM');
 
-		var a = 18*8; // margin size
-		var b = 1*8;  // circle size
-		var c = 1*8;  // circle spacing
-		var d = 2;    // line size
-
-		const timeStyle = {"width" : a+"px"};
-
-        const circleStyle = {
-        	"margin"      : "0px "+(c/2)+"px 0px "+c+"px",
-        	"display"     : "inline-block"
-        };
-
-        const achievementStyle = {
-			"marginLeft"     : (a+c+(b/2)-(d/2))+"px",
-			"borderLeft"     : d+"px solid #5c98ff",
-			"whiteSpace"     : "pre-line"
-        };
+	renderAchievement(achievement, index, achievements){
+		Timeline.checkInstance(this);
+		const key = btoa(JSON.stringify(achievement)+index);
+		const marginLeft = (this.A+this.C+(this.B/2)-(this.D/2))+"px";
+		const borderLeft = this.D+"px solid #5c98ff";
+		const isLast = (index+1) == achievements.length;
+		if (isLast) achievement += "\n\n";
 
 		return (
-			
-			<div key={key} className="TimelineElement">
-				
-				<div className="TimelineHeader">					
-					
-					<span 
-						style={timeStyle} 
-						className="TimelineTime"> 
-						{time} 
-					</span> 
-					
-					<div 
-						style={circleStyle} 
-						className="TimelineCircle">
-						<Circle size={b+"px"} color="#5c98ff"/>
-					</div> 
-					
-					<span 
-						className="TimelineLocation"> 
-						{i.location} 
-					</span>
+			<div 
+				className="TimelineAchievement"
+				key={key}
+				style={{marginLeft, borderLeft}}> 
+				{achievement}
+			</div>
+		)
+	}
+
+
+	renderCircle(){
+		Timeline.checkInstance(this);
+        const circleStyle = {"margin" : "0px "+(this.C/2)+"px 0px "+this.C+"px"};
+
+		return(
+			<div 
+				style={circleStyle} 
+				className="TimelineCircle">
+				<Circle color="#5c98ff" size={this.B+"px"}/>
+			</div> 
+		)
+	}
+
+
+	renderTime(element){
+		Timeline.checkInstance(this);
+		const time = moment(element.timestamp).locale(this.props.lang).format('YYYY MMMM');
+		const timeStyle = {"width" : this.A+"px"};
+
+		return(
+			<span 
+				style={timeStyle} 
+				className="TimelineTime"> 
+				{time} 
+			</span>
+		)
+	}
+
+
+	renderHeader(element){
+		return(
+			<span className="TimelineLocation"> <b> {element.position} </b> - {element.location} </span>
+		)
+	}
+
+
+	renderElement(element, index) {
+		Timeline.checkInstance(this);
+		const key = btoa(JSON.stringify(element)+index);
+
+		return (
+			<div className="TimelineElement" key={key}>
+				<div className="TimelineHeader">
+					{ this.renderTime(element) }
+					{ this.renderCircle() }
+					{ this.renderHeader(element) }
 				</div>
 				
-				<div 
-					style={achievementStyle} 
-					className="TimelineAchievement"> 
-					{i.achievement}
-				</div>
+				{ element.achievements.map(this.renderAchievement, this) }
 			</div>
 		);
 	}
 
+
 	render(){
-		
 		return (
 			<div className="Timeline">
-				{ this.props.content.map(this.renderElement.bind(this)) }
+				{ this.props.content.map(this.renderElement, this) }
 			</div>
 		);
+	}
+
+	static checkInstance(obj){
+		if (!obj instanceof Timeline) throw new Error("Object is not an instance of Timeline !");
 	}
 }

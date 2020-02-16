@@ -24,8 +24,9 @@
 }
 
 .TimelineAchievement{	
-	margin-bottom : -12px;
+	margin-bottom : -20px;
 	margin-top    : -12px;
 	display       : inline-block;
 	padding       : 6mm;
+	white-space   : pre-line;
 }

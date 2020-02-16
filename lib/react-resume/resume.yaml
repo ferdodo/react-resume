@@ -39,17 +39,22 @@ qualifications:
 
 timeline:
 - timestamp: 1502594930818
-  location: Consequat incididunt ad ad.
-  position: Ut excepteur.
-  achievement: Donec pharetra tellus ante, in viverra tellus lobortis.
+  location: Consequat incididunt ad ad
+  position: Ut excepteur
+  achievements: 
+  - Donec pharetra tellus ante, in viverra tellus lobortis.
+  - Lorem ipsum consectetur proident sint laborum. magna pariatur mollit commodo. Do aliqua. Lorem ipsum consectetur proident sint laborum.
+  - Donec pharetra tellus ante, in viverra tellus lobortis.
 
 - timestamp: 1511584930818
-  location: Integer nisl magna, ultrices sit amet.
-  position: Lorem ipsum do id.
-  achievement: Nulla facilisi. Fusce ac dolor in purus tristique euismod.
+  location: Integer nisl magna, ultrices sit amet
+  position: Lorem ipsum do id
+  achievements: 
+  - Nulla facilisi. Fusce ac dolor in purus tristique euismod.
 
 - timestamp: 1520584930818
-  position: Ut excepteur.
-  location: Ex voluptate.
-  achievement: Nulla blandit, diam vitae tempus tincidunt, purus tortor hendrerit
-    risus, vel ornare lacus ex eu dolor.
+  position: Ut excepteur
+  location: Ex voluptate
+  achievements: 
+  - Nulla blandit, diam vitae tempus tincidunt, purus tortor hendrerit.
+  - Risus, vel ornare lacus ex eu dolor.
