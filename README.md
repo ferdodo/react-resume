@@ -11,7 +11,7 @@ A small web resume project based on React.
 
 ## Edit the resume
 
-Edit the `lib/react-resume/resume.json` with your own informations.
+Edit the `lib/react-resume/resume.yaml` with your own informations.
 
 Change the `lib/profile.jpg` profile picture.
 

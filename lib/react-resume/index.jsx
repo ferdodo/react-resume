@@ -2,7 +2,7 @@ import Timeline      from './../react-timeline/index.jsx';
 import Qualification from './../react-qualification/index.jsx';
 import PersonalInfo  from './../react-personal-info/index.jsx';
 import Contact       from './../react-contact/index.jsx';
-import resume        from './resume.json';
+import resume        from './resume.yaml';
 import React         from 'react';
 import ReactDOM      from 'react-dom';
 import style         from './style.css';
