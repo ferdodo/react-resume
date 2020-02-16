@@ -6,20 +6,24 @@
 	page-break-inside: avoid;
 }
 
-.TimelineLocation{
+.TimelineLocation, .TimelineLocation > b{
+	vertical-align: top;
 	white-space : nowrap;
 }
 
 .TimelineHeader{
+	max-height: 25px;
 	white-space : nowrap;
 }
 
 .TimelineTime{
 	display    : inline-block;
 	text-align : right;
+	white-space   : pre-line;
 }
 
 .TimelineCircle{
+	vertical-align: top;
 	display : inline-block;
 }
 

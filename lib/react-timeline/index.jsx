@@ -57,7 +57,7 @@ export default class Timeline extends React.Component{
 			<span 
 				style={timeStyle} 
 				className="TimelineTime"> 
-				{time} 
+				{time} <br/> {element.duration}
 			</span>
 		)
 	}
