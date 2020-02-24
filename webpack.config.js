@@ -7,7 +7,7 @@ module.exports = {
 		"path"     : __dirname + "/www",
 		"filename" : "bundle.js"
 	},
-	"plugins": [new HtmlWebpackPlugin()],
+	"plugins": [new HtmlWebpackPlugin({"title":"react-resume"})],
 	"module" : {
 		"rules" : [{
 			"test" : /\.css$/,
