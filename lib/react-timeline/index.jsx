@@ -3,6 +3,7 @@ import ReactDOM    from 'react-dom';
 import Circle      from '../react-circle/index.jsx';
 import moment      from 'moment';
 import style       from './style.css'
+import { v4 as uuidv4 } from 'uuid';
 
 export default class Timeline extends React.Component{
 
@@ -17,7 +18,7 @@ export default class Timeline extends React.Component{
 
 	renderAchievement(achievement, index, achievements){
 		Timeline.checkInstance(this);
-		const key = btoa(JSON.stringify(achievement)+index);
+		const key = uuidv4();
 		const marginLeft = (this.A+this.C+(this.B/2)-(this.D/2))+"px";
 		const borderLeft = this.D+"px solid #5c98ff";
 		const isLast = (index+1) == achievements.length;
@@ -72,7 +73,7 @@ export default class Timeline extends React.Component{
 
 	renderElement(element, index) {
 		Timeline.checkInstance(this);
-		const key = btoa(JSON.stringify(element)+index);
+		const key = uuidv4();
 
 		return (
 			<div className="element" key={key}>

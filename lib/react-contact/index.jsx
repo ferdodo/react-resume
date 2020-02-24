@@ -1,11 +1,12 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
 import css      from './style.css';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class Contact extends React.Component{
 
 	renderContactItem(i){
-		let key = btoa(JSON.stringify(i));
+		let key = uuidv4();
 		const iconClasses = "icon " + i.iconClass;
 
 		return (

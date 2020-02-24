@@ -1,12 +1,13 @@
 import React    from 'react';
 import ReactDOM from 'react-dom';
 import style    from './style.css';
+import { v4 as uuidv4 } from 'uuid';
 
 export default class Qualification extends React.Component{
 
 
 	renderExperience(o, i){
-		let key = btoa(JSON.stringify(o));
+		let key = uuidv4();
 
 		const cardHeaderStyle = {
 	    	"fontWeight" : "bold" 
@@ -34,7 +35,7 @@ export default class Qualification extends React.Component{
 	}
 
 	renderQualification(i) {
-		let key = btoa(JSON.stringify(i));
+		let key = uuidv4();
 
 		const qualificationStyle = {
 			"margin" : "7mm 13mm 7mm 5mm"
