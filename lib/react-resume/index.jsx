@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import Timeline      from './../react-timeline/index.jsx';
 import Qualification from './../react-qualification/index.jsx';
 import PersonalInfo  from './../react-personal-info/index.jsx';
