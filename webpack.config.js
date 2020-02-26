@@ -4,7 +4,7 @@ module.exports = {
 	"mode" : "production",
 	"entry"  : './index.jsx',
 	"output" : {
-		"path"     : __dirname + "/www",
+		"path"     : __dirname + "/dist",
 		"filename" : "bundle.js"
 	},
 	"plugins": [new HtmlWebpackPlugin({"title":"react-resume"})],
