@@ -1,7 +1,9 @@
-
-# install environement
 FROM node
 WORKDIR /react-resume
+
+
+# http-server
+RUN npm install -g http-server
 
 
 # node_modules
@@ -19,6 +21,5 @@ COPY webpack.config.js .
 RUN npx webpack
 
 
-# prod env
-FROM httpd
-COPY --from=0 /react-resume/www /usr/local/apache2/htdocs
+# serve resume
+CMD http-server -c-1 dist
