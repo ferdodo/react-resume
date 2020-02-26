@@ -9,6 +9,7 @@
 .Timeline > .element > .header{
 	max-height: 25px;
 	white-space : nowrap;
+	margin-bottom : -12px;
 }
 
 .Timeline > .element > .header > .location, 
@@ -30,8 +31,7 @@
 }
 
 .Timeline > .element > .achievement{	
-	margin-bottom : -20px;
-	margin-top    : -12px;
+	margin-bottom : -32px;
 	display       : inline-block;
 	padding       : 6mm;
 	white-space   : pre-line;
