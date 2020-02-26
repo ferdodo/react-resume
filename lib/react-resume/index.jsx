@@ -1,14 +1,12 @@
-import "@babel/polyfill";
 import Timeline      from './../react-timeline/index.jsx';
 import Qualification from './../react-qualification/index.jsx';
 import PersonalInfo  from './../react-personal-info/index.jsx';
 import Contact       from './../react-contact/index.jsx';
 import resume        from './resume.yaml';
 import React         from 'react';
-import ReactDOM      from 'react-dom';
 import style         from './style.css';
 
-class App extends React.Component {
+export default class ReactResume extends React.Component {
 
 	render() {
 	
@@ -32,5 +30,3 @@ class App extends React.Component {
 		);
 	}
 }
-
-ReactDOM.render(<App/>, document.body);
